@@ -84,6 +84,12 @@ resource "github_actions_secret" "subscription_id" {
   plaintext_value = "07f75d77-80cc-46a1-b821-22dc487c154e"
 }
 
+resource "github_actions_secret" "test" {
+  repository      = var.GITHUB_REPO
+  secret_name     = "ARM_SUBSCRIPTION_ID_JWT"
+  plaintext_value = "booga booga"
+}
+
 
 resource "github_actions_secret" "tenant_id" {
   repository      = var.GITHUB_REPO
